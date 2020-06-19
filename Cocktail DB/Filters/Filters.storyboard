@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cnW-ZK-csm">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Filters View Controller-->
+        <scene sceneID="ebX-3H-Opu">
+            <objects>
+                <viewController id="cnW-ZK-csm" customClass="FiltersViewController" customModule="Cocktail_DB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WgS-AC-vu3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juk-Zs-ooo">
+                                <rect key="frame" x="23" y="808" width="368" height="31"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="APPLY">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="applyButtonPrassed:" destination="cnW-ZK-csm" eventType="touchUpInside" id="ax9-mb-3lQ"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bpp-fp-5Nd">
+                                <rect key="frame" x="0.0" y="44" width="414" height="741"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ACP-Jo-eiz" firstAttribute="trailing" secondItem="juk-Zs-ooo" secondAttribute="trailing" constant="23" id="A94-Y1-vG4"/>
+                            <constraint firstItem="ACP-Jo-eiz" firstAttribute="bottom" secondItem="juk-Zs-ooo" secondAttribute="bottom" constant="23" id="SA5-f7-Geo"/>
+                            <constraint firstItem="juk-Zs-ooo" firstAttribute="leading" secondItem="ACP-Jo-eiz" secondAttribute="leading" constant="23" id="UR1-Cb-Xzp"/>
+                            <constraint firstItem="Bpp-fp-5Nd" firstAttribute="width" secondItem="WgS-AC-vu3" secondAttribute="width" id="enn-li-eK2"/>
+                            <constraint firstItem="Bpp-fp-5Nd" firstAttribute="centerX" secondItem="ACP-Jo-eiz" secondAttribute="centerX" id="pTQ-87-FV2"/>
+                            <constraint firstItem="Bpp-fp-5Nd" firstAttribute="top" secondItem="ACP-Jo-eiz" secondAttribute="top" id="tfC-57-rVP"/>
+                            <constraint firstItem="juk-Zs-ooo" firstAttribute="top" secondItem="Bpp-fp-5Nd" secondAttribute="bottom" constant="23" id="tvy-e9-yMg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ACP-Jo-eiz"/>
+                    </view>
+                    <connections>
+                        <outlet property="applyButton" destination="juk-Zs-ooo" id="X1G-Uv-dgF"/>
+                        <outlet property="filterTableView" destination="Bpp-fp-5Nd" id="cxT-uz-xav"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h49-2E-t5o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-78.260869565217391" y="-36.160714285714285"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="P85-pd-5LI">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Drinks View Controller-->
+        <scene sceneID="wE5-sg-X75">
+            <objects>
+                <viewController id="P85-pd-5LI" customClass="DrinksViewController" customModule="Cocktail_DB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bn1-em-I57">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ins-jE-7JQ">
+                                <rect key="frame" x="0.0" y="5" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ins-jE-7JQ" firstAttribute="height" secondItem="bn1-em-I57" secondAttribute="height" id="HQo-w7-LvD"/>
+                            <constraint firstItem="ins-jE-7JQ" firstAttribute="centerY" secondItem="srk-g5-g5E" secondAttribute="centerY" id="Pm2-wi-YuD"/>
+                            <constraint firstItem="ins-jE-7JQ" firstAttribute="width" secondItem="bn1-em-I57" secondAttribute="width" id="Y9f-qP-bs0"/>
+                            <constraint firstItem="ins-jE-7JQ" firstAttribute="centerX" secondItem="srk-g5-g5E" secondAttribute="centerX" id="duE-ah-FlN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="srk-g5-g5E"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YjJ-7U-gda">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="4px-v1-njX">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="i4d-Mh-BGK">
+                                <rect key="frame" x="302" y="7" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="iBy-Qj-rsH" kind="show" id="Jg1-u8-5vW"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="drinksTableView" destination="ins-jE-7JQ" id="ovn-7R-dDe"/>
+                        <outlet property="filterButton" destination="i4d-Mh-BGK" id="BqA-z5-ePq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gMQ-KX-r44" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="15008.695652173914" y="112.5"/>
+        </scene>
+        <!--Filters-->
+        <scene sceneID="OfQ-YA-L5V">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Filters" id="iBy-Qj-rsH" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="qkj-OA-MBy"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="USo-p8-U4E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="15785" y="113"/>
+        </scene>
+    </scenes>
+</document>
